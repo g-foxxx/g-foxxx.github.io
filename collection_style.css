@@ -1,0 +1,270 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  height: 200vh; 
+  background-color: #d2d8d6;
+}
+
+header {
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0px; 
+  transition: top 0.5s ease-in-out;
+  margin: 5px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.sticky-header {
+  position: fixed;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  top: 0;
+  transition: top 0.5s ease-in-out;
+  margin: 5px;
+  z-index: 1000; /* Ensure the header is above other elements */
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.yellow-text {
+  color: #FDB813; 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  pointer-events: auto;
+}
+
+.nav-links li {
+  margin-right: 20px;
+  pointer-events: auto;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  display: inline-block;
+  transition: background 0.3s, border-radius 0.1s; /* Adjust the transition duration */
+  margin-right: 20px;
+}
+
+.nav-links a:hover {
+  background-color: #FDB813;
+  border-radius: 5px;
+  pointer-events: auto;
+}
+
+.nav-links a:not(:hover) {
+  transition: border-radius 0.1s;
+  border-radius: 0;
+}
+
+/* movies */
+
+video {
+  width: auto; /* Allow the width to adjust based on the video's aspect ratio */
+  height: 100%; /* Make the video fill the container vertically */
+  max-width: 100%; /* Ensure the video doesn't exceed its container width */
+  border: none; /* Remove any default video border */
+  outline: none; /* Remove any default focus outline */
+}
+
+.movie-container {
+  max-width: 800px;
+  margin: 200px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px; /* Set a fixed height for the movie items */
+  width: 250px;
+}
+
+.movie-item:hover {
+  border: none;
+}
+
+.movie-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px; /* Add space below the movie title */
+}
+
+.singer {
+  color: #888;
+  font-size: 14px;
+}
+
+/* music container */
+
+.song-container {
+  max-width: 800px;
+  margin: 200px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.song-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.song-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px; /* Set a fixed height for the movie items */
+  width: 250px;
+}
+
+.song-item:hover {
+  border: none;
+}
+
+.song-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px; /* Add space below the movie title */
+}
+
+.song-year {
+  color: #888;
+  font-size: 14px;
+}
+
+
+.prof {
+  background-color: black;
+  padding: 20px; /* Optional: Add padding for better visibility */
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content img#profile-image {
+  margin-top: 300px; /* Adjust the value to move the image higher */
+}
+
+
+.floating-container {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  width: 130px;
+  height: 240px;
+  text-align: center;
+  cursor: grab;
+  user-select: none;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.floating-container h1 {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  background-color: #FDB813;
+  color: rgba(51, 51, 51, 0.9) ;
+  margin-bottom: 10px;
+  padding: 10px; /* Adjust padding for space around the text */
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.floating-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.floating-button a {
+  color: #FDB813;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.floating-button a:hover {
+  background-color: #FDB813;
+  color: white;
+}
+
+.floating-button a:focus {
+  outline: none;
+}
+
+.floating-button a:active {
+  transform: scale(0.95);
+}
+
+/* Add a new class for hiding the music section by default */
+.music {
+  height: 500px;
+}
+
+/* Add a class to show the music section */
+.music.show {
+  height: auto; /* Set to auto to reveal the content */
+}
+

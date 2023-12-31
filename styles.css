@@ -1,0 +1,319 @@
+@media screen and (max-width: 600px) {
+  /* Add responsive styles for small screens */
+  .content {
+    flex-direction: column; /* Example: Stack sections vertically on small screens */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 200vh; 
+}
+
+header {
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0px; 
+  transition: top 0.5s ease-in-out;
+  margin: 5px;
+  z-index: 1001;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.sticky-header {
+  position: fixed;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  top: 0;
+  transition: top 0.5s ease-in-out;
+  margin: 5px;
+  z-index: 1000; /* Ensure the header is above other elements */
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.yellow-text {
+  color: #FDB813; 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  pointer-events: auto;
+}
+
+.nav-links li {
+  margin-right: 20px;
+  pointer-events: auto;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  display: inline-block;
+  transition: background 0.3s, border-radius 0.1s; /* Adjust the transition duration */
+  margin-right: 20px;
+}
+
+.nav-links a:hover {
+  background-color: rgba(	253, 184, 19, 0.3);
+  border-radius: 5px;
+  pointer-events: auto;
+}
+
+.nav-links a:not(:hover) {
+  transition: border-radius 0.1s;
+  border-radius: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 0px;  
+}
+
+.content h1 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.content p {
+  margin: 10px;
+  margin-top: 0px;
+}
+
+.content .img{
+  border-radius: 8px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+body .content .profile-image {
+  margin-top: 100px !important; /* Adjust the value to move the image higher */
+  height: 200px;
+}
+
+.floating-container {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  width: 130px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  height: 20px;
+  z-index: 1001;
+}
+
+.floating-container h2 {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  background-color: #FDB813;
+  color: #fff; /* Set the text color for better visibility */
+  margin-bottom: 10px; /* Adjust the margin as needed */
+  padding: 0px; /* Add padding for space around the text */
+  border-radius: 5px; /* Add rounded corners if desired */
+}
+
+.floating-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-items: center; /* Align buttons to the center */
+}
+
+.floating-container a {
+  color: #FDB813;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1001; 
+}
+
+.floating-container:hover {
+  background-color: white;
+}
+
+.floating-container a:hover {
+  color: #FDB813;
+}
+
+.floating-button a:focus {
+  outline: none;
+}
+
+.floating-button a:active {
+  transform: scale(0.95);
+}
+
+.draggable-container {
+  /* Your existing styles for draggable-container */
+  pointer-events: auto; /* Set to auto to allow interactions */
+}
+
+.fam {
+  background-color: white; /* Change background color as desired */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block; /* Display as inline-block to position next to each other */
+  vertical-align: top; /* Align to the top of the container */
+  height: 1500px;
+}
+
+.friend {
+  background-color: #333; /* Change background color as desired */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  height: 1500px;
+  display: inline-block; /* Display as inline-block to position next to each other */
+  vertical-align: top; /* Align to the top of the container */
+  position: relative;
+  text-align: center;
+  z-index: 1000;
+}
+
+.friend h1 {
+  position: absolute;
+  top: 25%;
+  left: 63%;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+  color: black;
+  z-index: 1;
+}
+
+.friend img {
+  border-radius: 8px;
+  height: auto;
+  width: 200px;
+  margin: 20px; /* Adjust margin as needed */
+  transition: transform 0.3s ease-in-out;
+  display: block;
+}
+
+.friend img:hover {
+  transform: scale(1.2); /* Increase the scale on hover */
+}
+
+.content {
+  display: flex;
+  flex-direction: column; /* Change to row to display sections side by side */
+  justify-content: space-around; /* Adjust spacing between sections */
+  align-items: stretch;
+  height: 2000px;
+}
+
+.prof,
+.fam,
+.friend {
+  flex: 1; /* Distribute available space equally among the sections */
+  box-sizing: border-box;
+  height: auto;
+}
+
+.prof {
+  background-color: #d2d8d6;
+  background-image: url("jae-removebg.png");
+  background-size: contain; /* Adjust to 'contain' or a specific size if needed */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fam {
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.friend {
+  background-color: #d2d8d6;
+  background-image: url("jab-removebg.png");
+  background-size: contain; /* Adjust to 'contain' or a specific size if needed */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 40%;
+  z-index: -1;
+}
+
+/* Add the following styles to remove spacing and margins between sections */
+.prof h1,
+.fam p,
+.friend p {
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 600px;
+}
+
+.prof p{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+  margin-left: 610px;
+}
+
+.profile-image{
+  margin-left: 600px;
+}
+
+/* Add the following styles to adjust the height of the profile image */
+.content .profile-image {
+  margin-top: 20px;
+  height: 200px auto; /* Adjust the height as needed */
+}
+
+
+
+
